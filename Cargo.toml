@@ -1,0 +1,21 @@
+[package]
+name = "nanochat_ws"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.38", features = ["serde"] }
+dotenvy_macro = "0.15.7"
+futures-channel = "0.3.30"
+futures-util = "0.3.30"
+jsonwebtoken = "9.3.0"
+prost = "0.12.4"
+serde = { version = "1.0.199", features = ["derive"] }
+tokio = { version = "1.37.0", features = ["full"] }
+tokio-tungstenite = "*"
+uuid = { version = "1.8.0", features = ["serde"] }
+
+[build-dependencies]
+prost-build = "0.12.4"

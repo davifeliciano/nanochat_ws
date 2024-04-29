@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package chat;
+
+message Message {
+  string token = 1;
+  string recipient_id = 2;
+  bytes content = 3;
+  int64 created_at = 4;
+}
+
+enum EventType {
+  PING = 0;
+  PONG = 1;
+  TYPING = 2;
+}
+
+message Event {
+  EventType type = 1;
+  string token = 2;
+  string recipient_id = 3;
+}
